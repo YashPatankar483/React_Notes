@@ -1,4 +1,4 @@
-#React Intro
+# REACT INTRODUCTION
 React is a Library or a frontend web-framework meaning it consist of pre written code which we can use it to build our complex applications faster and easily.
 
 In react you build your application by following the component tree.
@@ -8,10 +8,11 @@ Each of the components can be reused and customized. Thus reducing the code redu
 
 In react we represent each component in the html file by a reference which looks similar to the html tag as if we have built our custom html element.
 
+## REACT COMPONENTS
 Components are made by combining 3 different files together i.e html, css and js. Each defining the structure, styling and separate functionality for that component. 
 The components can interact with the server independently and update themselves without refreshing the entire webpage or application.
 
-Diffing Process (Reconciliation) chatgpt:
+Diffing Process (Reconciliation) (source: chatgpt):
 In React, "diffing" refers to the process of efficiently updating the user interface (UI) by determining which parts of the UI need to be updated in response to changes in application state. This process is also known as "reconciliation."
 
 When a component's state or props change, React needs to update the UI to reflect those changes. However, updating the entire UI every time there's a change can be inefficient, especially in complex applications with many components.
@@ -20,7 +21,7 @@ React's diffing algorithm optimizes this process by comparing the current state 
 
 The diffing algorithm operates on the virtual DOM, a lightweight representation of the actual DOM in memory. When a component's state or props change, React re-renders the component and updates the virtual DOM. Then, it compares the updated virtual DOM with the previous one to determine the minimal set of changes needed to update the real DOM.
 
-Note: For Initial practice I am going to use the "codesandbox" which is the online code editor especially
+Note: For Initial practice I am going to use the "codesandbox" which is the online code editor
 
 In react projects we are going to deal with 3 types of files: html, css and js. 
 Among these 3, 99% of times we are going to work with the .js file. 
@@ -44,6 +45,7 @@ document.getElementById("root").appendChild(h1);
 Now the "Hello World!" is displayed on the screen. 
 We were able to write plain HTML inside the javaScript file. And it is pure magic. Is is only possible because of JSX.
 
+## JSX
 *What is JSX?
 JSX is the core of React
 JSX files are the js files which contain html in it.
@@ -68,6 +70,7 @@ ReactDOM.render(
 
 In the above code constants name and luckyNo which is a js code are used inside html using {}. This curly braces tells the compiler that it is not the part of html rather it is a js code.
 
+## BABLE
 What is Bable?
 So the compiler comes from the React Module.
 The React Module contains Bable which is a JavaScript Compiler.
@@ -100,7 +103,7 @@ You can embed string constants of variables inside the html as follows:
 <h1>Hello {fName + " " + lName}!</h1>
 <h1>Hello {`${fName} ${lName}`}!</h1>     // This approach of adding strings is known as "Template Literals" in other languages it is known as string interpolation. It is the feature of ES6. Using tempelate literals we can add strings, multi lined strings and also interpolate strings.
 
-*JSX Attributes and Styling React Elements:
+##JSX Attributes and Styling React Elements:
 
 In JSX file if we write the attributes in the way we were in the pure html file then the browser will give an error. for eg:
 ReactDOM.render(
@@ -163,7 +166,7 @@ ReactDOM.render(
   document.getElementById("root")
 );
 
-* Inline styling for react elements:
+## Inline styling for react elements:
 In pure html we use to apply inline styling to our elements using the "style" attribute. Similarly we can do so in the react as well. But there is a small twist.
 You cant just go and use the 'style' property and put the css rules in there. This will get us an error.
 Because we are in JSX file and not inside the html file. In JSX all the stuff in there is nothing but javaScript. So we have to put javaScript and not css.
@@ -242,7 +245,7 @@ Now we have created and configured the component.
 
 *Common & Best Practice: All the components of your website must be configured or included into the root component i.e App. And this App component <App /> which contains the structure of your website is included into index.js. 
 
-# ES6 import, export and modules
+## ES6 import, export and modules
 Modules : We were able to create custom files which created independent packaged bits of functionality which depending on what we need from it we were able to import them in different files. These files are refered to as modules.
 
 I have a main file on whcih I am working named index.js. 
@@ -312,7 +315,7 @@ This will import everything from math.js module.
 Now here 'pi' is an object which contains all the stuff - default, doublepi() and triplepi() in the math.js.
 We can access the required functionalities or properties by- pi.default or pi.doublepi(), etc.
 
-# Creating a React App
+## Creating a React App
 There are many ways we can create a React app- (For more ways visit: www.react.dev > Installation)
 Here I am going to create a react app using two ways:
 
@@ -337,7 +340,7 @@ Here I am going to create a react app using two ways:
 	
 	npm start
 	
-# Props in React
+## Props in React
 
 	Props is the important concept of the components.
 	The below code contains repetative elements. This makes our code long and clutured.
@@ -435,7 +438,7 @@ Here I am going to create a react app using two ways:
 	The above line creates n no. of components using map()
 	The map() basically takes the object one by one from the contacts array and it passes it to the createCards() function. And this function returns the customized Card component for the given contact details.
 	
-# Array Functions
+## Array Functions
 
 *Map -Create a new array by doing something with each item in an array.
 	For in order to do something to each element we have to pass a function to the map().
@@ -497,7 +500,7 @@ Here I am going to create a react app using two ways:
 		}
 	);
 	
-#Fat Arrow
+##Fat Arrow
 
 Fat arrow are nothing but functions. These functions are no different from the basic functions which we normally create, but the difference lies in its syntax. These are the part of ES6 feature. Using these fat arrow we only reduce the length of our code and nothing more.
 
@@ -635,7 +638,7 @@ State can be best summarized using the following equation:
 			Hooks are functions that allow us to hook into the state of our app and read or modify it. 
 			
 
-# React Hooks
+## React Hooks
 
 	We have this code which renders a h1 and button.
 	
@@ -802,7 +805,7 @@ State can be best summarized using the following equation:
 	
 	Reconciliation is the algorithm behind what is popularly understood as the "virtual DOM." A high-level description goes something like this: when you render a React application, a tree of nodes that describes the app is generated and saved in memory. This tree is then flushed to the rendering environment — for example, in the case of a browser application, it's translated to a set of DOM operations. When the app is updated (usually via setState), a new tree is generated. The new tree is diffed with the previous tree to compute which operations are needed to update the rendered app.
 
-# Javascript ES6 Object and Array Destructuring
+## Javascript ES6 Object and Array Destructuring
 
 Why destructuring is useful?
 We will understand it with the help of array destructuring.
@@ -843,7 +846,7 @@ const {name="Fluffy", sound="meow"};
 If name is not defined - console.log(name); -> Fluffy      And if name is defined to cat -> cat
 
 
-#React Forms:
+##React Forms:
 
 Through forms arise complex events. In react we need to handle or make use of these complex events and also use the knowledge of state to get our forms work as normal. Because the way the forms work in react is preety different from the normal html forms. Cause the html form elements like <input>, <select> and <textarea> in html can update there state themselves when the user makes changes to them. For eg if the user changes the text inside the input, then the input element updates the value of its value attribute automatically. But when we try to create forms using react we cant manage or handle the user entered data in the react unless we gain access to the data from orignal html forms using event and event handlers. Because the react form component does not have its own ability to( mimic the real html forms) reflect the changes made by the user in the UI and use this to control the UI. Thus we have to make our react forms to mimic the normal html forms explicitly.
 
@@ -953,7 +956,7 @@ The end effect of class and functional component is the same. But class componen
 We cant use Hooks inside the class component. 
 
 
-# Complex States and Changing the Complex state
+## Complex States and Changing the Complex state
 It is not like the state can only hold the single value. It can also hold complex data like object. The state which can hold complex data like objects are known as Complex States.
 
 There are times we will be using complex states in our application. For eg in our react forms.
@@ -1024,7 +1027,7 @@ Array literals ([1, ...iterableObj, '4', 'five', 6])
 Object literals ({ ...obj, key: 'value' })
 
 
-# Managing the Component Tree
+## Managing the Component Tree
 
 We are aware that we can make changes to the child component based on the interaction with the parent component. But can we make changes to the parent component based on the interaction with child component?
 
@@ -1037,7 +1040,7 @@ We can create a function which is responsible to change the state of the parent 
 This way we can change the state of the parent component through the child component.
 
 
-# Hooks
+## Hooks
 
 1. useMemo()
 
@@ -1114,7 +1117,7 @@ Use Case 2: Used to provide the reference to the jsx element.
 
 
 
-#Routing in React
+##Routing in React
 
 	The question comes why we use react router in the first place if we have the anchor tag. The problem with anchor tag is when we navigate to the new page using anchor tag the whole page reloads. This is not efficient. Therefore we use react router to route to new page(to change page contents) without reloading the whole page.
 
@@ -1144,7 +1147,4 @@ Use Case 2: Used to provide the reference to the jsx element.
 	
 	By default, an active class is added to a <NavLink> component when it is active so you can use CSS to style it.
 	
-	
-
-#React Redux
 
